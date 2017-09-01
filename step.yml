@@ -1,0 +1,36 @@
+title: "Zip files"
+summary: This step allows to generate a zip file from a directory.
+description: |-
+  This step allows to generate a zip file from a directory.
+website: https://github.com/FutureWorkshops/bitrise-step-generate-zip
+source_code_url: https://github.com/FutureWorkshops/bitrise-generate-zip
+host_os_tags:
+  - osx-10.10
+  - osx-10.9
+project_type_tags:
+  - ios
+  - xamarin
+  - android
+type_tags:
+  - zip
+is_requires_admin_user: true
+is_always_run: false
+is_skippable: false
+run_if: ""
+inputs:
+  - source_path: ''
+    opts:
+      title: "Source files"
+      summary: The path to the directory containing the files to zip.
+      description:
+      is_expand: true
+      is_required: true
+      value_options: []
+  - zip_path: '$BITRISE_DEPLOY_DIR/archive.zip'
+    opts:
+      title: "Archive path and filename"
+      summary: The full path to the archive to produce.
+      description: 
+      is_expand: true
+      is_required: true
+      value_options: []
